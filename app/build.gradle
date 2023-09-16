@@ -1,3 +1,5 @@
+import com.dmendanyo.myplaces.Libs
+
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
@@ -47,16 +49,25 @@ android {
 }
 
 dependencies {
+    implementation Libs.AndroidX.androidx_core
+    implementation Libs.AndroidX.Activity.activity
 
-    implementation 'androidx.core:core-ktx:1.8.0'
-    implementation platform('org.jetbrains.kotlin:kotlin-bom:1.8.0')
-    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.3.1'
-    implementation 'androidx.activity:activity-compose:1.5.1'
-    implementation platform('androidx.compose:compose-bom:2022.10.00')
-    implementation 'androidx.compose.ui:ui'
-    implementation 'androidx.compose.ui:ui-graphics'
-    implementation 'androidx.compose.ui:ui-tooling-preview'
-    implementation 'androidx.compose.material3:material3'
+    implementation Libs.AndroidX.Lifecycle.lifecycle
+    implementation Libs.AndroidX.Lifecycle.viewmodelKtx
+
+    implementation Libs.AndroidX.Compose.ui
+    implementation Libs.AndroidX.Compose.ui_tooling
+    implementation Libs.AndroidX.Compose.material
+    implementation Libs.AndroidX.Compose.material3
+    implementation Libs.AndroidX.Compose.navigation
+
+    implementation Libs.Coil.coil
+
+    implementation Libs.Lottie.lottie
+
+    implementation Libs.AndroidX.Compose.maps
+    implementation Libs.Maps.maps
+
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
