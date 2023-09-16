@@ -25,18 +25,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.dmendanyo.myplaces.navigation.BottomNavigationScreen
 import com.dmendanyo.myplaces.home.HomeScreen
+import com.dmendanyo.myplaces.navigation.bottomNavItems
 import com.dmendanyo.myplaces.ui.theme.white
 
 @Composable
 fun MainScreen() {
     val navController = rememberNavController()
-    val bottomNavItems = listOf(
-        BottomNavigationScreen.Home,
-        BottomNavigationScreen.Search,
-        BottomNavigationScreen.Favourites,
-        BottomNavigationScreen.Near
-    )
-
     Scaffold(
         bottomBar = { BottomBar(navController, bottomNavItems) }
     ) {
@@ -57,7 +51,6 @@ fun MainScreenNavConfigurations(
             composable(BottomNavigationScreen.Home.route) { HomeScreen() {} }
             composable(BottomNavigationScreen.Search.route) { Text("Search") }
             composable(BottomNavigationScreen.Favourites.route) { Text("Favourites") }
-//            composable(BottomNavigationScreen.Near.route) { NearScreen() }
         }
     }
 }
@@ -73,7 +66,6 @@ fun BottomBar(
             BottomNavigationItem(
                 icon = { Icon(screen.icon, stringResource(id = screen.title)) },
                 label = { BottomBarLabel(label = screen.title) },
-//                label = { Text(text = stringResource(id = screen.title)) },
                 selected = currentRoute == screen.route,
                 onClick = {
                     if (currentRoute != screen.route) {

@@ -22,7 +22,10 @@ sealed class BottomNavigationScreen(
 
     object Favourites :
         BottomNavigationScreen("Favourites", R.string.favourites, Icons.Default.Star)
-
-    object Near :
-        BottomNavigationScreen("Near", R.string.near, Icons.Default.LocationOn)
 }
+
+val bottomNavItems = listOf(
+    BottomNavigationScreen.Home,
+    BottomNavigationScreen.Search,
+    BottomNavigationScreen.Favourites,
+    )
