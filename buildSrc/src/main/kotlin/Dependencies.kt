@@ -8,7 +8,7 @@ object Libs {
         const val gradlePlugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:$version"
 
         object Coroutines {
-            private const val version = "1.6.0"
+            private const val version = "1.6.4"
 
             const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:$version"
             const val test = "org.jetbrains.kotlinx:kotlinx-coroutines-test:$version"
@@ -48,12 +48,6 @@ object Libs {
             const val maps = "com.google.maps.android:maps-compose:$maps_version"
         }
 
-        object Navigation {
-            private const val version = "1.0.0"
-
-            const val navigation = "androidx.hilt:hilt-navigation-compose:$version"
-        }
-
         object Room {
             private const val version = "2.4.2"
 
@@ -75,9 +69,11 @@ object Libs {
     }
 
     object Hilt {
-        private const val version = "2.44"
+        private const val version = "2.46.1"
+        private const val nav_version = "1.0.0"
 
         const val android = "com.google.dagger:hilt-android:$version"
+        const val navigation = "androidx.hilt:hilt-navigation-compose:$nav_version"
         const val compiler = "com.google.dagger:hilt-android-compiler:$version"
         const val buildGradle = "com.google.dagger.hilt.android:$version"
     }

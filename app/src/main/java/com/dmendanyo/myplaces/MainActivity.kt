@@ -16,7 +16,9 @@ import com.dmendanyo.myplaces.commons.LoaderComponent
 import com.dmendanyo.myplaces.extensions.subscribeLoader
 import com.dmendanyo.myplaces.main.MainScreen
 import com.dmendanyo.myplaces.ui.theme.MyPlacesTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
